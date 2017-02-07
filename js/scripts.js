@@ -1,5 +1,11 @@
 $(function () { //document ready start 
-  $.stellar();  //shorhand for $(window).stelllar(); //can be inside document ready or not   
+  $.stellar(
+    {
+//      horizontalScrolling: false,
+//      verticalOffset: 120
+      responsive: true
+    }
+  );  //shorhand for $(window).stelllar(); //can be inside document ready or not   
 // or below works  
 //    $(function(){
 //          $.stellar({

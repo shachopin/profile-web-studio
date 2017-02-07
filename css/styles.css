@@ -166,7 +166,7 @@ if you have got the above implementation working, you'll notice that clicking on
 }
 
 #about {
-  background-image: url(../img/contact4.jpg);
+  background-image: url(../img/contact4-2.jpg);
   background-attachment: fixed;  /*this will only make the backgroud image fixed, but not moving at all */
   /*
   to make the background image actually move (just different rate than the content)
@@ -175,7 +175,9 @@ if you have got the above implementation working, you'll notice that clicking on
   2) in script tag: $.stellar();
   3) the div which has the backgroud image shoud have this attribute data-stellar-background-ratio="0.5" 
   4) it will be jittery without backgroud-attachment: fixed, so add that as above
+  4.5) also notice if the backgound-image is too large will be jittery. use pixlr to size the img to 1920x1080
   5) check stellar.js home page for more options
+  check your codespen stellar.js experiment for why the background img repeats when the screen witth is narrow
   */
   background-size: cover;
   /*We need to add another line of instructions to the styles.css file to direct the image to fill the div, regardless of the window size.*/
@@ -200,7 +202,7 @@ Find another background image by going to Unsplash or a stock image website of y
 https://unsplash.com/
 */
 #contact{
-    background-image: url("../img/contact2.jpg");
+    background-image: url("../img/contact2-2.jpg");
 /*Add a background image*/
     background-attachment: fixed;
 /*Give the background a fixed position does it not scroll when you scroll*/
@@ -212,7 +214,9 @@ https://unsplash.com/
   2) in script tag: $.stellar();
   3) the div which has the backgroud image shoud have this attribute data-stellar-background-ratio="0.5" 
   4) it will be jittery without backgroud-attachment: fixed, so add that as above
+  4.5) also notice if the backgound-image is too large will be jittery. use pixlr to size the img to 1920x1080
   5) check stellar.js home page for more options
+  check your codespen stellar.js experiment for why it repeats when the screen width is narrow
   */
     background-size: cover;
 /*Have the background cover the entire div section*/
@@ -220,7 +224,6 @@ https://unsplash.com/
 /*Change the color of the text on top so it is readable, and adjust the padding as needed.*/
     padding:100px;
     padding-top: 50px;
-    height: 600px;
 }
 /*
 Other than our "textarea" field, our input fields are pretty small. To make them longer, inside your input tag, add the class form-control. This is another Bootstrap class that makes the width of your text field 100%. If you want to modify the width of form-control so that it is a different size, you can overwrite the default Bootstrap class settings in your CSS file.
