@@ -1,0 +1,104 @@
+* { box-sizing: border-box; }
+/*
+* { box-sizing: border-box; }
+REMEMBER
+* is the universal selector. You are applying this rule to every element in your layout. Now, the box model will work in a way that makes more sense: Padding and border will not affect an element’s size if you’ve specified one.
+Margin still affects width
+*/
+
+.container {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.header h1 {
+  text-align: center;
+}
+
+
+.column {
+  /*display: inline-block;  not needed. float is on div anyway */ 
+  float:left;
+  width:30%;
+  padding: 0 20px;
+}
+
+img {
+  width:100%;
+}
+
+.main-text {
+  clear: both;
+  padding-top: 60px;
+}
+
+h1,
+h2,
+h3 {
+  font-family: Futura, Helvetica, Arial, sans-serif;
+}
+
+.intro p {
+  font-family: Futura, Helvetica, Arial, sans-serif;
+  font-size: 2em;
+  font-weight: 100;
+  -webkit-margin-before: 0;
+
+}
+
+.skills h3 {
+  text-align: center;
+  text-transform: uppercase;
+}
+
+#skill-list {
+  margin-left: 50px;
+}
+
+body {
+  background-color: #fffeea;
+  color: #34495e;
+  padding-top: 90px; /* to account for the navbar height */
+}
+
+.skills {
+  background-color: #5AD4C2;
+  color: #FFF;
+}
+/* nav bar */
+.nav ul li{
+  display: inline-block;
+  letter-spacing: 0.05em;
+  padding: 20px 10px 20px;
+}
+.nav {
+  background-color: black;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  /*
+  To make sure your navigation bar stays in the topmost position (the distance from the top of the viewport should be zero) add a top property with a value of 0:
+  */
+}
+.nav ul li a {
+  text-transform: uppercase;
+  color: white;  
+  text-decoration: none;
+  transition: color 600ms;
+  /*
+  To make your hover effect appear more smoothly and naturally, add a CSS transition. This gets added to the rule for the link itself, not its :hover pseudo-class.
+  transition: color 600ms;
+  The number value can be set to milliseconds (ms) or seconds (s).
+  Be mindful of how different browsers read CSS. For example, for Safari to understand this property, you need to repeat it with the vendor prefix -webkit- like so:
+
+  -webkit-transition: color 600ms;
+  */
+}
+.nav ul {
+  float:right;
+}
+
+.nav a:hover {
+ color: #ff0;
+ text-decoration: none;
+}

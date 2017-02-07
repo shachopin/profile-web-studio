@@ -1,0 +1,304 @@
+/* better to have one consolidated version of css, instead of separate css files */
+/*
+body { //this is needed when you are building your own navbar from scratch and want to use bootstrap scrollspy feature
+  position:relative;
+}*/
+
+/* no jumbotron for now
+.jumbotron {
+  background-image: url(../img/landscape.jpg);
+  background-size: cover;
+  //We need to add another line of instructions to the styles.css file to direct the image to fill the div, regardless of the window size.//
+}
+
+.jumbotron p {
+  color: white;
+} 
+*/
+
+/*
+ //nav bar 
+//<!-- old nav done by me, check about.html and about_styles.css. now we need to use bootstrap navbar -->
+
+.nav ul li{
+  display: inline-block;
+  letter-spacing: 0.05em;
+  padding: 20px 10px 20px;
+}
+.nav {
+  background-color: black;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  //
+  To make sure your navigation bar stays in the topmost position (the distance from the top of the viewport should be zero) add a top property with a value of 0:
+  //
+}
+.nav ul li a {
+  text-transform: uppercase;
+  color: white;  
+  text-decoration: none;
+  transition: color 600ms;
+  //
+  To make your hover effect appear more smoothly and naturally, add a CSS transition. This gets added to the rule for the link itself, not its :hover pseudo-class.
+  transition: color 600ms;
+  The number value can be set to milliseconds (ms) or seconds (s).
+  Be mindful of how different browsers read CSS. For example, for Safari to understand this property, you need to repeat it with the vendor prefix -webkit- like so:
+
+  -webkit-transition: color 600ms;
+  //
+}
+.nav ul {
+  float:right;
+}
+
+.nav a:hover {
+ color: #ff0;
+ text-decoration: none;
+}
+
+#carousel-example-generic {
+  padding-top: 70px; // to account for the height of the navbar, otherwise navbar will be behind and unseen //  
+}
+.nav {
+  z-index: 1; 
+}
+// if you want the image carousel to stay in the same position (because you might want the navigation bar to be transparent in front of your image carousel), you can give your navigation a CSS property called z-index. 
+
+without this, when scrolling up, the carousel image will still cover the navbar until the container text shows up*/
+body {
+  background-color: #fffeea;
+  color: #34495e;
+  /* no need for padding-top: 90px; because bootstrap automatically leaves space for top navbar */
+  margin-top:51px; /* however need this for better, because still some pic got covered */
+} 
+
+/*logo or brand name*/
+.projectName a{
+  text-transform: uppercase;
+  color: white;
+  transition:  color 1s;
+  text-decoration: none;
+}
+.projectName a:hover {
+  color: yellow;
+}
+/*
+if you have got the above implementation working, you'll notice that clicking on the anchors will scroll down too far and the fixed navigation will cover up the section headings.
+*/
+.anchor{ 
+  padding-top: 70px;
+}
+
+.header h1 {
+  text-align: center;
+}
+
+/* for profile container */
+/* works row */
+#profile .img-div {
+  padding: 5px 0;
+  /*border-radius is on image, not the img-div*/
+}
+#profile #works img { /* to make it round */
+  border-radius: 50%;  
+  margin: auto;  /* img is inline, so top and bottom margin no affect, but here I care about left and right, so it will center
+  /* otherwise the img is to the left inside of the col-md-blablah div */
+}
+/* works2 row */
+#profile .work-img {
+  display: block; /* needed to center the element with margin, originally it's anchor tag, so was inline element, need block element */
+  /* without display block, 5px margin top and bottom no works, also max-width:200px not working, so still shift to left */
+  margin: 5px auto 5px auto; /* center the image inside the column if it's smaller */
+  /* same as works row, without this, the img will be to the left inside of col-md-blahblah*/
+  max-width: 200px; /* needs to be set to the width of your image files if they are relatively small */
+  position: relative; /* is needed for .info position: absolute to work */
+}
+
+#profile .info { /* it's a span tag, so inline elemnt, inline element can work with positioning */
+  position: absolute; /* let's us move the text around and not worry about the image, parent is image and has been set to relative position */
+  top: 15%; /* position the text 15% away from the top */
+  left: 22%;
+  color:#fff;
+  font-family:Futura;
+  text-transform:uppercase;
+  font-weight:700;
+  letter-spacing:0.5em;
+  line-height:1.6;
+  display: none; /* initially no show, only show when mouse hover over */
+
+}
+#profile .proj-title {
+  font-weight:100;
+}
+
+/* for about container */
+#about .intro, #about .skills, #about .photo, #about .main-text {
+  padding: 0 20px;
+}
+
+#about h1,
+#about h2,
+#about h3 {
+  font-family: Futura, Helvetica, Arial, sans-serif;
+}
+
+#about .intro p {
+  font-family: Futura, Helvetica, Arial, sans-serif;
+  font-size: 2em;
+  font-weight: 100;
+  -webkit-margin-before: 0;
+}
+
+#about .skills h3 {
+  text-align: center;
+  text-transform: uppercase;
+}
+
+#about #skill-list {
+  margin-left: 50px;  
+}
+
+#about .skills {
+  background-color: #5AD4C2;
+  color: #FFF;
+  padding: 10px 0;
+}
+
+#about {
+  background-image: url(../img/contact4.jpg);
+  background-attachment: fixed;  /*this will only make the backgroud image fixed, but not moving at all */
+  /*
+  to make the background image actually move (just different rate than the content)
+  you need to do:
+  1) add stellar.js after jquery
+  2) in script tag: $.stellar();
+  3) the div which has the backgroud image shoud have this attribute data-stellar-background-ratio="0.5" 
+  4) it will be jittery without backgroud-attachment: fixed, so add that as above
+  5) check stellar.js home page for more options
+  */
+  background-size: cover;
+  /*We need to add another line of instructions to the styles.css file to direct the image to fill the div, regardless of the window size.*/
+  margin-top:10px;
+  margin-bottom: 10px;
+}
+
+#about .intro h2, #about h1{
+  color: #836B6B
+}
+
+#about p {
+  color: #f9ff00
+} 
+
+/*for contact container */
+
+/*Turns out that when you use a background-image, you get a background-attachment property with a default value of 'scroll'. That's why setting it to 'fixed' has this effect. Pretty cool!*/
+/*Websites with parallax have background images and website content that scroll at different rates. Check out how it’s done on the Firewatch page. You can create a simple Parallax effect using only CSS by adding a background image to a div and modifying the properties of the image. The background image will not move when you scroll, giving the effect of layering.
+
+Find another background image by going to Unsplash or a stock image website of your choice,
+https://unsplash.com/
+*/
+#contact{
+    background-image: url("../img/contact2.jpg");
+/*Add a background image*/
+    background-attachment: fixed;
+/*Give the background a fixed position does it not scroll when you scroll*/
+  /*this will only make the backgroud image fixed, but not moving at all */
+  /*
+  to make the background image actually move (just different rate than the content)
+  you need to do:
+  1) add stellar.js after jquery
+  2) in script tag: $.stellar();
+  3) the div which has the backgroud image shoud have this attribute data-stellar-background-ratio="0.5" 
+  4) it will be jittery without backgroud-attachment: fixed, so add that as above
+  5) check stellar.js home page for more options
+  */
+    background-size: cover;
+/*Have the background cover the entire div section*/
+    color: white;
+/*Change the color of the text on top so it is readable, and adjust the padding as needed.*/
+    padding:100px;
+    padding-top: 50px;
+    height: 600px;
+}
+/*
+Other than our "textarea" field, our input fields are pretty small. To make them longer, inside your input tag, add the class form-control. This is another Bootstrap class that makes the width of your text field 100%. If you want to modify the width of form-control so that it is a different size, you can overwrite the default Bootstrap class settings in your CSS file.
+*/
+.form-control {
+  width:80%;
+}
+
+#contact button {
+  margin-top: 10px;
+}
+
+#contact #signUpButton {
+  margin-top: -4px;
+}
+/* for google map using google javascript api */
+#map {
+  height: 250px;
+  width: 100%;
+}
+
+
+/*for faq container */
+/* glyphicon is just text, can set hover color
+.glyphicon:hover {
+ color: orangered;
+}
+
+.glyphicon {
+ transition:  color 2s;
+}
+*/
+#faq .panel-heading { /* has to be specific enough to beat the bootstrap css rule */
+  background-color: orangered;
+}
+#faq a {
+  text-decoration: none;
+}
+/* typical usecase to make two buttons one at the far left side and one at far right side */
+.learn-more {
+  text-align: left;
+  float: left;
+}
+.modal-button {
+  float: right;
+  padding: 15px;
+}
+/*
+we weren't quite happy with the margins of our row, so we played with it in Chrome's Developer Tools until we arrived at a value we liked. You can do this as well.
+*/
+#faq .row {
+  margin-right: -11px;
+  margin-left: 1px;
+}
+
+#modalembed {
+    height: 600px;
+    width: 100%;
+    padding: 10px;
+}
+
+
+/*for footer container */
+footer {
+  height: 50px;
+  background-color:aqua;
+  color: brown;
+}
+footer #copyright {
+  margin-top: 17px;
+  display: inline-block;  /*without it, span is considered as inline elemeent, top bottom size no change */
+}
+footer .social {
+  /*margin-right: 68px; because I wrap a container wrapper, so no need to set left-right maargin */
+  margin-top: 17px;
+  float: right; /* this is to make sure the whole social group(consisting two butons) are to the right inside the footbar*/
+}
+footer #facebook, footer #twitter {
+  float:right;/* this is to make sure these two buttons are next to each other, using display:inline-block no use */
+  padding-left:10px;
+}
