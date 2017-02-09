@@ -14,7 +14,7 @@ var projects2 = [
     pic: "https://www.petfinder.com/wp-content/uploads/2012/09/Blog-Kitty-Cam-solo.jpg",
     title: "Project 1",
     description: "Node Project",
-    link: "http://www.google.com"
+    link: "https://oracle-jet.gomix.me/"
   }, {
     pic: "http://www.animal-photography.com/thumbs/red_tabby_long_hair_kitten_~AP-0UJFTC-TH.jpg",
     title: "Project 2",
