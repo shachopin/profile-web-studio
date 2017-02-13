@@ -18,8 +18,8 @@ var projects2 = [
   }, {
     pic: "http://www.animal-photography.com/thumbs/red_tabby_long_hair_kitten_~AP-0UJFTC-TH.jpg",
     title: "Project 2",
-    description: "Angular Project",
-    link: "http://www.oracle.com"
+    description: "Sinatra Project",
+    link: "http://david-blackjack.herokuapp.com"
   }, {
     pic: "http://www.animal-photography.com/thumbs/silver_tabby_kittens~AP-0JO6Y9-TH.jpg",
     title: "Project 3",
@@ -33,7 +33,7 @@ var projects2 = [
   }, {
     pic: "http://rs245.pbsrc.com/albums/gg58/ari_of_shadow/cat%20cute/cutecat-1.jpg~c200",
     title: "Project 5",
-    description: "Sinatra Project",
+    description: "Angular Project",
     link: "#"
   }, {
     pic: "https://s-media-cache-ak0.pinimg.com/564x/c7/b1/2b/c7b12bc4efcba9fe7521890e8bb16934.jpg",
