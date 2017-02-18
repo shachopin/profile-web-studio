@@ -61,8 +61,8 @@ $(function () { //document ready start
       //$('.message-box').hide();
       $(".message-box").css("border", "2px solid red");
       $('#visible-comment').text("Why is there no message?");
-      return false; //not submit the form -- essentially this button is not able to submit form any more until you type something in message box, essentially it makes the button action, hence preventiong from form submission
-      //return or return true will make the button continue to submit the form
+      return false; //not submit the form -- essentially this button is not able to submit form any more until you type something in message box, essentially it breaks the button action, hence preventiong from the later form submission
+      //return or return true will make the button still continue to submit the form
     }
   });
   //on keyup event in the message box

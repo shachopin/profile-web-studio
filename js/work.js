@@ -13,7 +13,7 @@ var projects2 = [
   {
     pic: "https://www.petfinder.com/wp-content/uploads/2012/09/Blog-Kitty-Cam-solo.jpg",
     title: "Project 1",
-    description: "Node Todo List",
+    description: "Node-based Todo List",
     link: "https://oracle-jet.gomix.me/"
   }, {
     pic: "http://www.animal-photography.com/thumbs/red_tabby_long_hair_kitten_~AP-0UJFTC-TH.jpg",
@@ -29,8 +29,9 @@ var projects2 = [
   }, {
     pic: "http://www.animal-photography.com/thumbs/silver_tabby_kitten_looking_up~AP-0DLVMB-TH.jpg",
     title: "Project 4",
-    description: "Java Project",
-    link: "#"
+    //description: "Java Project",
+    description: "Node-based Easy Notes Taking",
+    link: "https://file-based-notes-node.gomix.me/"
   }, {
     pic: "http://rs245.pbsrc.com/albums/gg58/ari_of_shadow/cat%20cute/cutecat-1.jpg~c200",
     title: "Project 5",
