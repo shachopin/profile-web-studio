@@ -36,7 +36,7 @@ var projects2 = [
     pic: "http://rs245.pbsrc.com/albums/gg58/ari_of_shadow/cat%20cute/cutecat-1.jpg~c200",
     title: "Project 5",
     //description: "Angular Project",
-    description: "Node Rest Request Demo"
+    description: "Node Rest Request Demo",
     link: "https://rest-transmitter.gomix.me"
   }, {
     pic: "https://s-media-cache-ak0.pinimg.com/564x/c7/b1/2b/c7b12bc4efcba9fe7521890e8bb16934.jpg",
