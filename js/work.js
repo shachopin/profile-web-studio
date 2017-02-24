@@ -41,8 +41,9 @@ var projects2 = [
   }, {
     pic: "https://s-media-cache-ak0.pinimg.com/564x/c7/b1/2b/c7b12bc4efcba9fe7521890e8bb16934.jpg",
     title: "Project 6",
-    description: "Knockout Project",
-    link: "#"
+    //description: "Knockout Project",
+    description: "Web-based Code Runner",
+    link: "https://execute-any-code.gomix.me/"
   }, {
     pic: "http://rs995.pbsrc.com/albums/af72/sibudy7/cute-baby-cat.jpg~c200",
     title: "Project 7",
