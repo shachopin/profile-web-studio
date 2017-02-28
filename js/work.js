@@ -49,7 +49,7 @@ var projects2 = [
     title: "Project 7",
     //description: "Oracle JET Project",
     description: "Angular App",
-    link: "dawei-gemstore.herokuapp.com/index.html"
+    link: "https://dawei-gemstore.herokuapp.com/index.html"
   }, {
     pic: "https://s-media-cache-ak0.pinimg.com/736x/57/1f/c5/571fc5cf918b4bda8fda976e2bd83e1f.jpg",
     title: "Project 8",
