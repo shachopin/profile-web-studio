@@ -388,5 +388,7 @@ footer #facebook, footer #twitter {
     opacity: 0;
 }
 .portfolio-modal .list-group-item {
-  border: none;
+    border: none;
+    padding:0;
+    padding-bottom: 10px;
 }
