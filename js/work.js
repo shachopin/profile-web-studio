@@ -15,46 +15,35 @@ var projects2 = [
   {
     pic: "https://www.petfinder.com/wp-content/uploads/2012/09/Blog-Kitty-Cam-solo.jpg",
     title: "Node.js With Oracle Javascript Framework",
-    description: "Apps using Oracle Javascript Framework as Frontend, Node.js as backend and MongoDB as database",
+    description: "Apps using Oracle Javascript Framework (JET) as Frontend, Node.js as backend and MongoDB as database",
     apps: [
       {
-        name: "No more deadline horror - manage your daily todo and weekly todo effortlessly",
+        name: "No more deadline horror - daily todos and weekly todos? DONE!",
         "business features": ["Add and remove daily todo", 
                               "Add weekly todo item into the dropdown", 
-                              "Clicking on the weekly todo will upgrade it to a daily todo"],
-        "technical highlights": ["Oracle Javascript framework as frontend", 
+                              "Clicking the weekly todo upgrades it to a daily todo"],
+        "technical highlights": ["Oracle JET as frontend", 
                                  "Nodes.js as backend", 
-                                 "Mongodb as the database",
+                                 "Mongodb as db",
                                  "Restful API"],
-        link: "https://oracle-jet.gomix.me/"
-      },
-      {
-        name: "cracking the code interview",
-        "business features": ["item5", "item6"],
-        "technical highlights": ["item7", "item8"],
         link: "https://oracle-jet.gomix.me/"
       }
     ]
   },{
-    pic: "https://www.petfinder.com/wp-content/uploads/2012/09/Blog-Kitty-Cam-solo.jpg",
-    title: "Node.js With angular",
-    description: "Apps using Oracle Javascript Framework as Frontend, Node.js as backend and MongoDB as database",
+    pic: "http://www.animal-photography.com/thumbs/red_tabby_long_hair_kitten_~AP-0UJFTC-TH.jpg",
+    title: "Node.js With JQuery",
+    description: "Apps using JQuery as Frontend, Node.js as backend",
     apps: [
       {
-        name: "No more deadline horror - manage your daily todo and weekly todo effortlessly",
-        "business features": ["Add and remove daily todo", 
-                              "Add weekly todo item into the dropdown", 
-                              "Clicking on the weekly todo will upgrade it to a daily todo"],
-        "technical highlights": ["Oracle Javascript framework", 
+        name: "Notes taking never made so easy",
+        "business features": ["Add and remove note card",  
+                              "Remove all cards by one click",
+                              "Clicking the card will highlight it to view details"],
+        "technical highlights": ["JQuery", 
                                  "Nodes.js", 
-                                 "Mongodb as the database fgfdgfdgfdgfdgfdgfdgfdfgfgdfgfgfdgfggf"],
-        link: "https://oracle-jet.gomix.me/"
-      },
-      {
-        name: "cracking the code interview",
-        "business features": ["item5", "item6"],
-        "technical highlights": ["item7", "item8"],
-        link: "https://oracle-jet.gomix.me/"
+                                 "Mongodb",
+                                 "Restful API"],
+        link: "https://mongodb-based-notes-node.glitch.me/?client=jquery"
       }
     ]
   }/*, {
