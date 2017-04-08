@@ -131,6 +131,13 @@ if you have got the above implementation working, you'll notice that clicking on
 #profile .proj-title {
   font-weight:100;
 }
+#profile #works2 img {
+  border-radius: 10px;
+}
+/*  not working, To be investigated
+#profile .work-img:focus, #profile #works2 img:focus {
+  border-radius: 10px;
+} */
 
 /* for about container */
 #about .intro, #about .skills, #about .photo, #about .main-text {
