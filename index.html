@@ -7,10 +7,21 @@
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
 
     <title>Dawei Dai's Web Studio</title>
-
+    
     <!-- Bootstrap core CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
-
+    
+    <!-- From rails startboostrap app agency.css-->
+    <!--link rel="stylesheet" href="https://superiorwebmaker.herokuapp.com/app1/css/agency.css"-->
+    
+    <!-- Custom Fonts -->
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <!--link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css"--> 
+    <!-- For example, in your style.css you can refer to the font type as Montserrat -->  
+    <!--link href="https://fonts.googleapis.com/css?family=Kaushan+Script" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700" rel="stylesheet" type="text/css"-->
+    
     <!-- Custom styles for this template go here -->
     <link rel="stylesheet" href="css/styles.css">
 
@@ -39,12 +50,12 @@
     <!-- for opengraph social media sharing content, without it, the social icons will still show, just don't know what to share -->
     <meta property="og:title" content="Dawei's Web Studio - Bay Area Statup" />
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://dawei.bitballoon.com" />
+    <meta property="og:url" content="https://fullpower.bitballoon.com" />
     <meta property="og:image" content="https://superiorwebmaker.herokuapp.com/app1/img/portfolio/golden-preview.png" />
     <meta property="og:description" content="Dawei can bring up your website very efficiently">
-    <meta property="og:site_name" content+"SuperiorWebMaker" />
+    <meta property="og:site_name" content="SuperiorWebMaker" />
   </head>
-
+  <!--MISC attention: for inline element, width and top and down padding (and margin) not applied -->
   <body data-spy="scroll" data-target=".navbar"> <!--this is needed for scrollspy from bootstrap-->
     <!-- old nav done by me, check about.html and about_styles.css. now we need to use bootstrap navbar -->
     <!--div class="nav">
@@ -66,10 +77,11 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
+            <!--the above is not trivial, it's the 3 stripes for the hamburger menu in the top right corner -->
           </button>
           <div class="projectName navbar-brand">
             <a href="#">
-              Dawei's Web Studio <span class="glyphicon glyphicon-thumbs-up"></span>
+              FullPower Web Studio &nbsp;&nbsp;<span class="fa fa-battery-full"></span>
             </a>
           </div> <!--end projectName -->
         </div> <!--end navbar-header -->
@@ -110,22 +122,22 @@
         <div class="item active">
           <img src="img/portfolioheroimage1-2.jpg" alt="carousel image 1">
           <div class="carousel-caption">
-            <h3>Here is an example headline</h3>
-            <p>Here is an example description</p>
+            <!--h3>Here is an example headline</h3>
+            <p>Here is an example description</p-->
           </div>
         </div>
         <div class="item">
           <img src="img/portfolioheroimage2.jpg" alt="carousel image 2">
           <div class="carousel-caption">
-            <h3>Here is an example headline</h3>
-            <p>Here is an example description</p>
+            <!--h3>Here is an example headline</h3>
+            <p>Here is an example description</p-->
           </div>
         </div>
         <div class="item">
           <img src="img/portfolioheroimage3-2.jpg" alt="carousel image 3">
           <div class="carousel-caption">
-            <h3>Here is an example headline</h3>
-            <p>Here is an example description</p>
+            <!--h3>Here is an example headline</h3>
+            <p>Here is an example description</p-->
           </div>
         </div>
       </div>
@@ -142,7 +154,7 @@
     </div>
     
     <!--headings container -->
-    <div class="container-fluid" id="heading">
+    <div class="container-fluid" id="heading" style="display:none"> <!--temporarily hide it using display:none, also bypassed HTML nested comments issue-->
       <!-- Example row of columns -->
       <div class="row">
         <div class="col-md-4">
@@ -170,10 +182,10 @@
     <!-- profile container -->
     <div class="container-fluid anchor" id="profile">
       <div class="header">
-        <h1>Projects Profile</h1>
+        <h1>Project Profiles</h1>
       </div>
       <!-- here we use jquery append() to dynaically generate them -->
-      <div class=”row” id="works">  <!-- you don't need two rows, can be just one row, automatically will break into two rows -->
+      <div class="row" id="works">  <!-- you don't need two rows, can be just one row, automatically will break into two rows -->
         <!--div class="col-md-3 col-xs-6">
           <div class="img-div"> --  to style col-md-blahblah is too generic, so create this inner div just for styling 
             <img src="img/kitten.jpg" class="img-responsive">  -- otherwise the image will be too large and mess the layout
@@ -215,50 +227,139 @@
           </div> 
         </div-->
       </div>
-      <div class=”row” id="works2">
+      <div class="row" id="works2">
       </div>
     </div><!-- /container -->
     
+    <!-- Portfolio Modal 1, inside it's using style.css's project modal part styling--> <!--here it's anther way of launhcing model a href="#porfolioModal1" class="modal", 
+         the other way is using data-target for div like your view resume button 
+         I am going to generate this modal code dynamically in scripts.js -->
+    <!--
+    <div class="portfolio-modal modal fade" id="portfolioModal1" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-content">
+            <div class="close-modal" data-dismiss="modal">
+                <div class="lr">
+                    <div class="rl">
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="modal-body">
+                            <h2>(Category Name)</h2>
+                            <p class="item-intro text-muted">(Apps using Oracle Javascript Framework as Frontend, Node.js as backend and MongoDB as database)</p>
+                            <!- -ul class="list-inline item-intro text-muted">
+                                <li>-Frontend: Oracle Javascript Framework</li>
+                                <li>-Backend: Node</li>
+                                <li>-Database: MongoDB</li>
+                            </ul- ->
+                            <table class="table table-striped table-bordered">
+                              <thread>
+                                <tr>
+                                  <th>App Name</th>
+                                  <th>Business Features</th>
+                                  <th>Technical Highlights</th>
+                                  <th>Link</th>  
+                                </tr>
+                              </thread>
+                              <tr >
+                                <td>
+                                  (Notes Taking Never Made So Easy)
+                                </td>
+                                <td>                           
+                                  <ul class="list-group">
+                                    <li class="list-group-item">(Dapibus ac facilisis in)</li>
+                                    <li class="list-group-item">Dapibus ac facilisis in</li>
+                                    <li class="list-group-item">Cras sit amet nibh libero</li>
+                                    <li class="list-group-item">Porta ac consectetur ac</li>
+                                    <li class="list-group-item">Vestibulum at eros</li>
+                                  </ul>
+                                </td>
+                                <td>
+                                  <ul class="list-group">
+                                    <li class="list-group-item ">(Dapibus ac facilisis in)</li>
+                                    <li class="list-group-item ">Dapibus ac facilisis in</li>
+                                    <li class="list-group-item">Cras sit amet nibh libero</li>
+                                    <li class="list-group-item ">Porta ac consectetur ac</li>
+                                    <li class="list-group-item ">Vestibulum at eros</li>
+                                  </ul>
+                                </td>
+                                <td>
+                                  <a href="http://www.google.com" target="_blank" class="btn btn-primary">Go to app</a>
+                                </td>   
+                              </tr>
+                            </table>
+                            <!- - img class="img-responsive img-centered" src="https://superiorwebmaker.herokuapp.com/app1/img/portfolio/roundicons-free.png" alt=""- ->
+                            <button type="button" class="btn btn-success" data-dismiss="modal"><i class="fa fa-times"></i> Close Project</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    -->
     <!-- about container -->
     <div class="container-fluid anchor" id="about" data-stellar-background-ratio="0.5">
       <div class="header">
         <h1>About Me</h1>
       </div>
-      <div class=”row” id="story1">
-        <div class="col-md-3">
-          <div class="photo">
-            <!--crazy jittery still happening even when the backgroud-attachment has been set to fixed. The problem wound up being an image tag that was in the same div as the background image that was involved in the parallax scrolling. Upon removing this image, jitter stopped.-->
-            <!--http://stackoverflow.com/questions/17375411/stellar-js-background-attachment-set-to-fixed-but-crazy-jitter-still-happening-->
+      <div class="row" id="story1">
+        <!--div class="col-md-3">
+          <div class="photo">      
             <img src="img/kitten.jpg" alt="Kitten" class="img-responsive">       
           </div>
-        </div>
-        <div class="col-md-3">
+        </div-->
+        <!--crazy jittery still happening even when the backgroud-attachment has been set to fixed. The problem wound up being an image tag that was in the same div as the background image that was involved in the parallax scrolling. Upon removing this image, jitter stopped.-->
+        <!--my problem was not this, my problem was the parrelax background image size too big, should reduce to 1920x1080 -->
+        <!--http://stackoverflow.com/questions/17375411/stellar-js-background-attachment-set-to-fixed-but-crazy-jitter-still-happening-->
+        <div class="col-md-8">
           <div class="intro">
             <h2>Introduction</h2>
-            <p>Hi My name is Dawei Dai. I am a Web Developer.</p>
+            <p>Hi there, my name is Dawei Dai. I am a full-stack web developer. 
+              I love technologies and am a fast learner. 
+              I can bring your sites up and running in no time.</p>
           </div>
         </div>
-        <div class="col-md-3">
+        <div class="col-md-4">
           <div class="skills">
             <h3>My Skills</h3>
             <ul id="skill-list">
-              <li>Web Development</li>
-              <li>Mobile Development</li>
-              <li>Piano Solo</li>
+              <li>Frontend:
+                <ul>
+                  <li>Jquery</li>
+                  <li>Angular.js</li>
+                  <li>Knockout.js</li>
+                  <li>Oracle JET framework</li>
+                </ul>
+              </li>
+              <li>Backend:
+                <ul>
+                  <li>Node.js</li>
+                  <li>Ruby on Rails</li>
+                  <li>Sinatra</li>
+                  <li>Java</li>
+                </ul>
+              </li>
+              <li>MongoDB</li>
+              <li>Restful API</li>
+              <!--li>Mobile Development</li-->
+              <!--li>Piano Solo</li-->
             </ul>
           </div>
         </div>
-        <div class="col-md-3">
+        <div class="col-md-3" style="display:none"> <!--using display:none, it will be hidden, but music is still playing(if you set ?autoplay=1 in iframe URL). cool-->
           <div class="hobbies">
             <!--iframe in a responsive way-->
             <!-- 16:9 aspect ratio -->
             <!--div class="embed-responsive embed-responsive-16by9">
-              <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/7maJOI3QMu0"></iframe>
+              <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/7maJOI3QMu0?autoplay=1"></iframe>
             </div-->
+            <!-- notice append "?autoplay=1" in the src attribute will autoplay, works for chrome verified, so cool -->
 
             <!-- 4:3 aspect ratio -->
             <div class="embed-responsive embed-responsive-4by3">
-              <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/7maJOI3QMu0?autoplay=1"></iframe>
+              <!--iframe class="embed-responsive-item" src="https://www.youtube.com/embed/7maJOI3QMu0"></iframe-->
               <!-- notice append "?autoplay=1" in the src attribute will autoplay, works for chrome verified, so cool -->
             </div>
             
@@ -269,9 +370,13 @@
         <div class="col-md-12"> <!-- no need for two rows, use same will align the left edges nicely -->
           <div class="main-text">
             <h3>My Story</h3>
-            <p>Kitsch gluten-free ugh yuccie vinyl. Air plant man braid vice forage chia. Cliche ramps succulents iPhone, asymmetrical knausgaard synth snackwave organic helvetica franzen man braid green juice pour-over. XOXO crucifix glossier meh tumeric. Mlkshk fap wayfarers messenger bag mixtape kogi man braid. Polaroid shoreditch organic, succulents schlitz mumblecore fixie flexitarian gochujang asymmetrical biodiesel sriracha vexillologist. Sartorial iceland yr jean shorts, tote bag subway tile letterpress meggings.</p>
-            <p>Kitsch gluten-free ugh yuccie vinyl. Air plant man braid vice forage chia. Cliche ramps succulents iPhone, asymmetrical knausgaard synth snackwave organic helvetica franzen man braid green juice pour-over. XOXO crucifix glossier meh tumeric. Mlkshk fap wayfarers messenger bag mixtape kogi man braid. Polaroid shoreditch organic, succulents schlitz mumblecore fixie flexitarian gochujang asymmetrical biodiesel sriracha vexillologist. Sartorial iceland yr jean shorts, tote bag subway tile letterpress meggings.</p>
-            <p>Kitsch gluten-free ugh yuccie vinyl. Air plant man braid vice forage chia. Cliche ramps succulents iPhone, asymmetrical knausgaard synth snackwave organic helvetica franzen man braid green juice pour-over. XOXO crucifix glossier meh tumeric. Mlkshk fap wayfarers messenger bag mixtape kogi man braid. Polaroid shoreditch organic, succulents schlitz mumblecore fixie flexitarian gochujang asymmetrical biodiesel sriracha vexillologist. Sartorial iceland yr jean shorts, tote bag subway tile letterpress meggings.</p>
+            <div style="font-size: 1.4em">
+              <p >I am a school-trained and self-taught web developer. I went to Carnegie Mellon University, a school whose motto is "my heart is in my work". 
+              Having adopted that philosophy into my daily work, I love problem solving and giving all I got to my projects.</p>
+              <p> Having worked in Oracle for several years, I have gained good experience working on some of the coolest web frameworks in the world.
+              And now I am ready to apply that kind of experience and my driven work style to your projects.
+              Feel free to drop me a line and let's discuss</p>
+            </div>
           </div> 
         </div>
       </div>    
@@ -279,8 +384,8 @@
     
     <!-- contact container -->
     <div class="container-fluid anchor" id="contact" data-stellar-background-ratio="0.5">
-      <div class=”row” id="contact-row">
-        <div class="col-xs-3">
+      <div class="row" id="contact-row">
+        <div class="col-md-3">
           <div class="contact">
             <h3>Contact</h3>
             <p>Email: shachopin@gmail.com</p>
@@ -293,14 +398,14 @@
           <!--Google JavaScript API-->
           <div id="map"></div>
         </div>
-        <div class="col-xs-3">
+        <div class="col-md-3">
           <div class="signup">
             <!-- using MailChimp to signup email list -->
             <form action="//herokuapp.us11.list-manage.com/subscribe/post?u=a01e77b89a4b5aaa96ba887c5&amp;id=99692ae6df" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
               <h3>Sign Up Newsletter</h3>
               <div class="form-group">
                 <label for="email">Email</label>
-                <input id="email" name="EMAIL" class="form-control" type=”email” placeholder="Enter your email" title="email">
+                <input id="email1" name="EMAIL" class="form-control" type="email" placeholder="Enter your email" title="email">
               </div>
               <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
     <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_a01e77b89a4b5aaa96ba887c5_99692ae6df" tabindex="-1" value=""></div>
@@ -308,17 +413,17 @@
             </form>
           </div>
         </div>
-        <div class="col-xs-6">
+        <div class="col-md-6">
           <div class="form">
-            <form method="post" action="http://formspree.io/shachopin@gmail.com"><!--name attribute need to be set to all inputs for formspree to work and any form to work --><!--title attribute is for hover text-->
-              <h3>Say Hello</h3>
+            <form method="post" action="//formspree.io/shachopin@gmail.com"><!--name attribute need to be set to all inputs for formspree to work and any form to work --><!--title attribute is for hover text-->
+              <h3>Say Hello</h3>  <!--Change action here from http:// to use // because formspree reuqures https when run in https server, and http when run in http server--> <!-- everytime change a host, formspree asks you to confirm email -->
               <div class="form-group">
                 <label for="name">Name</label>
-                <input id=”name” class="form-control" type=”text” placeholder="Enter your name" title="name" name="name">
+                <input id="name" class="form-control" type="text" placeholder="Enter your name" title="name" name="name">
               </div>
               <div class="form-group">
                 <label for="email">Email</label>
-                <input id="email" class="form-control" type=”email” placeholder="Enter your email" title="email" name="email" required>
+                <input id="email2" class="form-control" type="email" placeholder="Enter your email" title="email" name="email" required>
                 <!-- you need to add required to make the emiail format validation to work -->
               </div>
               <label for="message">Message</label>
@@ -375,13 +480,13 @@
           <div class="panel-heading" role="tab" id="headingOne">
             <h4 class="panel-title">
               <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                <span class="glyphicon glyphicon-plus"></span> Collapsible Group Item #1
+                <span class="glyphicon glyphicon-plus"></span> Where are you based?
               </a>
             </h4>
           </div>
           <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
             <div class="panel-body">
-              Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+              I live in Bay Area of Californa. At this point, I am not looking for relocation. So I prefer online work or on-site job near SF or Silicon Valley. Thank you!
             </div>
           </div>
         </div>
@@ -389,13 +494,13 @@
           <div class="panel-heading" role="tab" id="headingTwo">
             <h4 class="panel-title">
               <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                <span class="glyphicon glyphicon-plus"></span> Collapsible Group Item #2
+                <span class="glyphicon glyphicon-plus"></span> Do need visa sponsorship?
               </a>
             </h4>
           </div>
           <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
             <div class="panel-body">
-              Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+              Negative. I have the permanent residence, so I am perfectly ok to work without a sponsorship.
             </div>
           </div>
         </div>
@@ -403,13 +508,13 @@
           <div class="panel-heading" role="tab" id="headingThree">
             <h4 class="panel-title">
               <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                <span class="glyphicon glyphicon-plus"></span> Collapsible Group Item #3
+                <span class="glyphicon glyphicon-plus"></span> When can you start?
               </a>
             </h4>
           </div>
           <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
             <div class="panel-body">
-              Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+              Yesterday!
             </div>
           </div>
         </div>
@@ -423,6 +528,12 @@
         <div class="social">
           <div id="twitter"><a href="https://twitter.com/DaweiDai" class="twitter-follow-button" data-show-screen-name="false" data-show-count="false">Follow @DaweiDai</a></div>
           <div id="facebook" class="fb-share-button" data-href="http://dawei.bitballon.com" data-layout="button" data-size="small" data-mobile-iframe="false"><a class="fb-xfbml-parse-ignore" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fdawei.bitballon.com%2F&amp;src=sdkpreparse">Share</a></div>  
+          <!-- can also use list inline -->
+          <!--ul class="list-inline">
+              <li>Date: July 2014</li>
+              <li>Client: Round Icons</li>
+              <li>Category: Graphic Design</li>
+          </ul-->
           <!--
           how to get
           https://twitter.com/about/resources/buttons#follow
@@ -436,7 +547,7 @@
     <!-- All your JavaScript comes now -->
     <!-- ============================= -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-    <!-- Bootstrap core JS -->
+    <!-- Bootstrap core JS, only after jquery, because dependent on jquery -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
     <!-- Can place script tags with JavaScript files here -->
     <script src="js/jquery.stellar.min.js"></script>
