@@ -8,12 +8,13 @@
 //   "http://rs245.pbsrc.com/albums/gg58/ari_of_shadow/cat%20cute/cutecat-1.jpg~c200",
 //   "https://s-media-cache-ak0.pinimg.com/564x/c7/b1/2b/c7b12bc4efcba9fe7521890e8bb16934.jpg",
 //   "http://rs995.pbsrc.com/albums/af72/sibudy7/cute-baby-cat.jpg~c200",
-//   "https://s-media-cache-ak0.pinimg.com/736x/57/1f/c5/571fc5cf918b4bda8fda976e2bd83e1f.jpg"
+//   "https://s-media-cache-ak0.pinimg.com/736x/57/1f/c5/571fc5cf918b4bda8fda976e2bd83e1f.jpg",
+//   "http://i245.photobucket.com/albums/gg58/ari_of_shadow/cat%20cute/KittySniper.jpg"
 // ];
 
 var projects2 = [
   {
-    pic: "https://www.petfinder.com/wp-content/uploads/2012/09/Blog-Kitty-Cam-solo.jpg",
+    pic: "http://rs245.pbsrc.com/albums/gg58/ari_of_shadow/cat%20cute/cutecat-1.jpg~c200",
     title: "Node.js With Oracle Javascript Framework",
     description: "Apps using Oracle Javascript Framework (JET) as Frontend, Node.js as backend and MongoDB as database",
     apps: [
@@ -30,7 +31,7 @@ var projects2 = [
       }
     ]
   },{
-    pic: "http://www.animal-photography.com/thumbs/red_tabby_long_hair_kitten_~AP-0UJFTC-TH.jpg",
+    pic: "https://s-media-cache-ak0.pinimg.com/564x/c7/b1/2b/c7b12bc4efcba9fe7521890e8bb16934.jpg",
     title: "Node.js With JQuery",
     description: "Apps using JQuery as Frontend, Node.js as backend",
     apps: [
@@ -39,11 +40,28 @@ var projects2 = [
         "business features": ["Add and remove note card",  
                               "Remove all cards by one click",
                               "Clicking the card will highlight it to view details"],
-        "technical highlights": ["JQuery", 
+        "technical highlights": ["JQuery and Ajax", 
                                  "Nodes.js", 
                                  "Mongodb",
                                  "Restful API"],
         link: "https://mongodb-based-notes-node.glitch.me/?client=jquery"
+      }
+    ]
+  },{
+    pic: "http://www.animal-photography.com/thumbs/silver_tabby_kittens~AP-0JO6Y9-TH.jpg",
+    title: "Node.js With Angular",
+    description: "Apps using Angular as Frontend, Node.js as backend",
+    apps: [
+      {
+        name: "Notes taking never made so easy",
+        "business features": ["Add and remove note card",  
+                              "Remove all cards by one click",
+                              "Clicking the card will highlight it to view details"],
+        "technical highlights": ["Angular", 
+                                 "Nodes.js", 
+                                 "Mongodb",
+                                 "Restful API"],
+        link: "https://mongodb-based-notes-node.glitch.me"
       }
     ]
   }/*, {

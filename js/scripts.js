@@ -140,7 +140,7 @@ $(function () { //document ready start
                                 + getTableRowsHTML(projects2[i].apps) +
                                "</thread>\
                             <table>\
-                            <button type='button' class='btn btn-success' data-dismiss='modal'><i class='fa fa-times'></i> Close Project</button>\
+                            <button type='button' class='btn btn-success' data-dismiss='modal'><i class='fa fa-times'></i> Close Window</button>\
                         </div>\
                     </div>\
                 </div>\
