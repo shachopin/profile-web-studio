@@ -16,7 +16,7 @@ var projects2 = [
   {
     pic: "http://rs245.pbsrc.com/albums/gg58/ari_of_shadow/cat%20cute/cutecat-1.jpg~c200",
     title: "Node.js With Oracle Javascript Framework",
-    description: "Apps using Oracle Javascript Framework (JET) as Frontend, Node.js as backend and MongoDB as database",
+    description: "Apps using Oracle Javascript Framework (JET) as frontend, Node.js as backend and MongoDB as database",
     apps: [
       {
         name: "No more deadline horror - daily todos and weekly todos? DONE!",
@@ -27,13 +27,13 @@ var projects2 = [
                                  "Nodes.js as backend", 
                                  "Mongodb as db",
                                  "Restful API"],
-        link: "https://oracle-jet.gomix.me/"
+        links: ["https://oracle-jet.gomix.me/"]
       }
     ]
   },{
     pic: "https://s-media-cache-ak0.pinimg.com/564x/c7/b1/2b/c7b12bc4efcba9fe7521890e8bb16934.jpg",
     title: "Node.js With JQuery",
-    description: "Apps using JQuery as Frontend, Node.js as backend",
+    description: "Apps using JQuery as frontend, Node.js as backend",
     apps: [
       {
         name: "Notes taking never made so easy",
@@ -44,13 +44,13 @@ var projects2 = [
                                  "Nodes.js", 
                                  "Mongodb",
                                  "Restful API"],
-        link: "https://mongodb-based-notes-node.glitch.me/?client=jquery"
+        links: ["https://mongodb-based-notes-node.glitch.me/?client=jquery"]
       }
     ]
   },{
     pic: "http://www.animal-photography.com/thumbs/silver_tabby_kittens~AP-0JO6Y9-TH.jpg",
     title: "Node.js With Angular",
-    description: "Apps using Angular as Frontend, Node.js as backend",
+    description: "Apps using Angular as frontend, Node.js as backend",
     apps: [
       {
         name: "Notes taking never made so easy",
@@ -61,7 +61,24 @@ var projects2 = [
                                  "Nodes.js", 
                                  "Mongodb",
                                  "Restful API"],
-        link: "https://mongodb-based-notes-node.glitch.me"
+        links: ["https://mongodb-based-notes-node.glitch.me"]
+      }
+    ]
+  },{
+    pic: "https://s-media-cache-ak0.pinimg.com/736x/57/1f/c5/571fc5cf918b4bda8fda976e2bd83e1f.jpg",
+    title: "Pure Client-side with Angular",
+    description: "Apps using Angular as frontend, and no server-side logic",
+    apps: [
+      {
+        name: "We will text you when the table is ready!",
+        "business features": ["Waiting customers leave their phone number",  
+                              "Customers get SMS when the table is ready (with numbers only verified through twilio trial account for now)",
+                              "Support register, log in and log out functionalities"],
+        "technical highlights": ["Angular",                                
+                                 "Firebase",
+                                 "Twilio API",
+                                 "Talking to another Nodes.js server for sending SMS"],
+        links: ["https://sms-client-wait-eat.glitch.me", "#"]
       }
     ]
   }/*, {

@@ -177,7 +177,9 @@ $(function () { //document ready start
           "</ul>\
         </td>\
         <td>\
-          <a href='" + apps[i].link + "' target='_blank' class='btn btn-primary'>Go to app</a>\
+          <div class='btn-group-vertical' role='group'>\ "
+            + getLinksHTML(apps[i].links) +
+          "</div>\
         </td>\
       </tr>\
       ";
@@ -199,6 +201,26 @@ $(function () { //document ready start
       technicalHighlightsHTML += "<li class='list-group-item text-left'>" + highlights[i]+ "</li>";
     }
     return technicalHighlightsHTML;
+  }
+  
+  function getLinksHTML(links) {
+    var linksHTML = "";
+    for (var i = 0; i< links.length; i++) {
+      var buttonClass;
+      var text;
+      switch (i) {
+        case 0:
+          buttonClass = "btn-primary";
+          text = "Go to app";
+          break
+        case 1:
+          buttonClass= "btn-warning";
+          text = "Check github";
+          break      
+      }
+      linksHTML += "<a href='" + links[i] + "' target='_blank' class='btn " + buttonClass + "' style='margin-bottom:10px'>" + text + "</a>";
+    }
+    return linksHTML;    
   }
   
   $(".work-img").mouseenter( function() {
