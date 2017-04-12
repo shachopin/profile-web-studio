@@ -79,6 +79,17 @@ var projects2 = [
                                  "Twilio API",
                                  "Talking to another Nodes.js server for sending SMS"],
         links: ["https://sms-client-wait-eat.glitch.me", "#"]
+      },
+      {
+        name: "Github search app",
+        "business features": ["Search for Github repos",  
+                              "Clicking one of the repos leads to the issues associated with that repo",
+                              "Clicking back button still shows the original list of repos.",
+                              "Single Page App"],
+        "technical highlights": ["Angular",                                
+                                 "Angular Routes",
+                                 "Github API"],
+        links: ["https://github-search.glitch.me"]
       }
     ]
   }/*, {
