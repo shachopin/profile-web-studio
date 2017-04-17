@@ -28,14 +28,6 @@ var projects2 = [
                                  "Mongodb as db",
                                  "Restful API"],
         links: ["https://oracle-jet.gomix.me/"]
-      },
-      {
-        name: "I love CODING! - Coding Exercises Tracking App",
-        "business features": ["Coding exercises I solved arranged by categoires",
-                             "Clicking the pie will lead to the external link of that exercise solution page"],
-        "technical highlights": ["Oracle JET as frontend", 
-                                 "Data retrieved from Firebase"],
-        links: ["https://coding-exercises.glitch.me/"]
       }
     ]
   },{
