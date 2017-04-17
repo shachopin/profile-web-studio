@@ -15,8 +15,8 @@
 var projects2 = [
   {
     pic: "http://rs245.pbsrc.com/albums/gg58/ari_of_shadow/cat%20cute/cutecat-1.jpg~c200",
-    title: "Node.js With Oracle Javascript Framework",
-    description: "Apps using Oracle Javascript Framework (JET) as frontend, Node.js as backend and MongoDB as database",
+    title: "Oracle Javascript Framework",
+    description: "Apps using Oracle Javascript Framework (JET) as frontend",
     apps: [
       {
         name: "No more deadline horror - daily todos and weekly todos? DONE!",
@@ -28,12 +28,20 @@ var projects2 = [
                                  "Mongodb as db",
                                  "Restful API"],
         links: ["https://oracle-jet.gomix.me/"]
+      },
+      {
+        name: "I love CODING! - Coding Exercises Tracking App",
+        "business features": ["Coding exercises I solved arranged by categoires",
+                             "Clicking the pie will lead to the external link of that exercise solution page"],
+        "technical highlights": ["Oracle JET as frontend", 
+                                 "Data retrieved from Firebase"],
+        links: ["https://coding-exercises.glitch.me/"]
       }
     ]
   },{
     pic: "https://s-media-cache-ak0.pinimg.com/564x/c7/b1/2b/c7b12bc4efcba9fe7521890e8bb16934.jpg",
     title: "Node.js With JQuery",
-    description: "Apps using JQuery as frontend, Node.js as backend",
+    description: "Apps using JQuery as frontend, Node.js as backend and MongoDB as database",
     apps: [
       {
         name: "Notes taking never made so easy",
@@ -50,7 +58,7 @@ var projects2 = [
   },{
     pic: "http://www.animal-photography.com/thumbs/silver_tabby_kittens~AP-0JO6Y9-TH.jpg",
     title: "Node.js With Angular",
-    description: "Apps using Angular as frontend, Node.js as backend",
+    description: "Apps using Angular as frontend, Node.js as backend and MongoDB as database",
     apps: [
       {
         name: "Notes taking never made so easy",
@@ -66,8 +74,8 @@ var projects2 = [
     ]
   },{
     pic: "https://s-media-cache-ak0.pinimg.com/736x/57/1f/c5/571fc5cf918b4bda8fda976e2bd83e1f.jpg",
-    title: "Pure Client-side with Angular",
-    description: "Apps using Angular as frontend, and no server-side logic",
+    title: "Pure Angular App",
+    description: "Apps using Angular as frontend",
     apps: [
       {
         name: "We will text you when the table is ready!",
@@ -81,10 +89,10 @@ var projects2 = [
         links: ["https://sms-client-wait-eat.glitch.me", "#"]
       },
       {
-        name: "Github search app",
-        "business features": ["Search for Github repos",  
-                              "Clicking one of the repos leads to the issues associated with that repo",
-                              "Clicking back button still shows the original list of repos.",
+        name: "Search your github repositories and track issues",
+        "business features": ["Search for github repos",  
+                              "Clicking one of the repos leads to the issues page associated with that repo",
+                              "Clicking back button leads back to the original list of repos",
                               "Single Page App"],
         "technical highlights": ["Angular",                                
                                  "Angular Routes",
