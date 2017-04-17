@@ -32,7 +32,7 @@ var projects2 = [
       {
         name: "I love CODING! - Coding Exercises Tracking App",
         "business features": ["Coding exercises I solved arranged by categories",
-                             "Clicking the pie will lead to the external link of that exercise solution page"],
+                             "Clicking the pie leads to the external link of that exercise solution page"],
         "technical highlights": ["Oracle JET as frontend", 
                                  "Data retrieved from Firebase"],
         links: ["https://coding-exercises.glitch.me/"]
