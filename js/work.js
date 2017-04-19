@@ -98,6 +98,14 @@ var projects2 = [
                                  "Angular Routes",
                                  "Github API"],
         links: ["https://github-search.glitch.me"]
+      },
+      {
+        name: "Angular Gemstore",
+        "business features": ["Tab structure",
+                              "Review form with live preview"],
+        "technical highlights": ["Angular",
+                                "Ruby Sinatra backend"],
+        links: ["http://dawei-gemstore.herokuapp.com/index.html", "https://github.com/shachopin/dawei-gemstore"]
       }
     ]
   }/*, {
