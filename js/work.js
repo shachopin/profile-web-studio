@@ -98,6 +98,15 @@ var projects2 = [
         links: ["https://sms-client-wait-eat.glitch.me", "#"]
       },
       {
+        name: "Trello-like Scrum Assistant is here to help!",
+        "business features": ["Create todo and assign it to a relevant team member",  
+                              "Move tasks across \"to do\", \"doing\" and \"done\" categories",
+                              "Delete a task when it's no longer needed to be tracked"],
+        "technical highlights": ["Angular",                                
+                                 "Firebase"],
+        links: ["https://scrum-assistant.glitch.me"]
+      },
+      {
         name: "Search your github repositories and track issues",
         "business features": ["Search for github repos",  
                               "Clicking one of the repos leads to the issues page associated with that repo",
@@ -115,6 +124,13 @@ var projects2 = [
         "technical highlights": ["Angular",
                                 "Ruby Sinatra backend"],
         links: ["http://dawei-gemstore.herokuapp.com/index.html", "https://github.com/shachopin/dawei-gemstore"]
+      },
+      {
+        name: "Home Rental Application Form",
+        "business features": ["Form interactivity can make the customer feel warm and welcomed"],
+        "technical highlights": ["Angular Form Validation",
+                                "Firebase"],
+        links: ["https://room-renting.glitch.me"]
       }
     ]
   }/*, {
