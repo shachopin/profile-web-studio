@@ -348,7 +348,8 @@
             </ul>
           </div>
         </div>
-        <div class="col-md-3" style="display:none"> <!--How to set background music? using display:none, it will be hidden, but music is still playing(if you set ?autoplay=1 in iframe URL). cool-->
+        <div class="col-md-3" style="visibility:hidden;height:0"> <!--How to set background music? Initially using display:none, it will be hidden, but music is still playing(if you set ?autoplay=1 in iframe URL). cool; -->
+          <!--this way stopped working. Should use visibilty:hidden and resize that square-->
           <div class="hobbies">
             <!--iframe in a responsive way-->
             <!-- 16:9 aspect ratio -->
@@ -363,7 +364,7 @@
               <!-- notice append "?autoplay=1" in the src attribute will autoplay, works for chrome verified, so cool -->
               <!--iframe class="embed-responsive-item" src="https://www.youtube.com/embed/VslLZcV9ZcU?autoplay=1"></iframe-->
               <!--another good playlist by yiruma -->
-              <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/5MbN81MAJFM?autoplay=1"></iframe>
+              <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/ss7EJ-PW2Uk?autoplay=1"></iframe>
             </div>
             
             <!--iframe in a non-responsive way, too big the size, doesn't shrink-->
