@@ -348,8 +348,10 @@
             </ul>
           </div>
         </div>
-        <div class="col-md-3" style="visibility:hidden;height:0"> <!--How to set background music? Initially using display:none, it will be hidden, but music is still playing(if you set ?autoplay=1 in iframe URL). cool; -->
-          <!--this way stopped working. Should use visibilty:hidden and resize that square-->
+        <div class="col-md-3" style="display:none"> <!--How to set background music? Initially using display:none, it will be hidden, but music is still playing(if you set ?autoplay=1 in iframe URL). cool; -->
+          <!--this way stopped working. Should use visibilty:hidden and resize that square like this style="visibility:hidden;height:0" -->
+          <!--the above worked again - style="display:none" -->
+          
           <div class="hobbies">
             <!--iframe in a responsive way-->
             <!-- 16:9 aspect ratio -->
