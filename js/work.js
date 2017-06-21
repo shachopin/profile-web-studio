@@ -104,7 +104,7 @@ var projects2 = [
                               "Delete a task when it's no longer needed to be tracked"],
         "technical highlights": ["Angular",                                
                                  "Firebase"],
-        links: ["https://scrum-assistant.glitch.me"]
+        links: ["https://scrum-assistant.glitch.me", "https://github.com/shachopin/scrum-assistant"]
       },
       {
         name: "Search your github repositories and track issues",
