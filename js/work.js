@@ -30,12 +30,13 @@ var projects2 = [
         links: ["https://oracle-jet.gomix.me/"]
       },
       {
-        name: "I love CODING! - Coding Exercises Tracking App",
+        name: "I love coding! - Coding Exercises Tracking App",
         "business features": ["Coding exercises I solved arranged by categories",
-                             "Clicking the pie leads to the external link of that exercise solution page"],
+                             "Double clicking the pie leads to the external link of that exercise solution page",
+                             "Single clicking the pie drills down into that category"],
         "technical highlights": ["Oracle JET as frontend", 
                                  "Data retrieved from Firebase"],
-        links: ["https://coding-exercises.glitch.me/"]
+        links: ["https://coding-exercises.glitch.me/", "https://github.com/shachopin/coding-exercises-glitch"]
       }
     ]
   },{
@@ -90,18 +91,21 @@ var projects2 = [
         name: "We will text you when the table is ready!",
         "business features": ["Waiting customers leave their phone number",  
                               "Customers get SMS when the table is ready (with numbers only verified through twilio trial account for now)",
-                              "Support register, log in and log out functionalities"],
+                              "Support register, log in and log out functionalities and send welcome emails"],
         "technical highlights": ["Angular",                                
                                  "Firebase",
                                  "Twilio API",
-                                 "Talking to another Nodes.js server for sending SMS"],
-        links: ["https://sms-client-wait-eat.glitch.me", "#"]
+                                 "Talking to another Nodes.js server for sending SMS and welcome emails"],
+        links: ["https://sms-client-wait-eat.glitch.me", "https://github.com/shachopin/wait-and-eat-glitch"]
       },
       {
         name: "Trello-like Scrum Assistant is here to help!",
-        "business features": ["Create todo and assign it to a relevant team member",  
+        "business features": ["Support user register, login, logout",
+                              "Login as scrum master, create todo and assign it to a relevant team member",    
                               "Move tasks across \"to do\", \"doing\" and \"done\" categories",
-                              "Delete a task when it's no longer needed to be tracked"],
+                              "Delete a task when it's no longer needed to be tracked",
+                              "Login as a team member, can still manage your own todos",
+                              "Reassign a todo to another team member"],
         "technical highlights": ["Angular",                                
                                  "Firebase"],
         links: ["https://scrum-assistant.glitch.me", "https://github.com/shachopin/scrum-assistant"]
@@ -127,10 +131,13 @@ var projects2 = [
       },
       {
         name: "Home Rental Application Form",
-        "business features": ["Form interactivity can make the customer feel warm and welcomed"],
+        "business features": ["Complete Home Renting Business App that includes rental application, photo gallery, google map customization",
+                              "Embedded AI and form interactivity makes the customer feel warm and welcomed"],
         "technical highlights": ["Angular Form Validation",
-                                "Firebase"],
-        links: ["https://room-renting.glitch.me"]
+                                "Firebase",
+                                "JQuery Masonry",
+                                "Google Map API"],
+        links: ["https://room-renting.glitch.me", "https://github.com/shachopin/room-renting-glitch"]
       }
     ]
   }/*, {
