@@ -130,9 +130,11 @@ var projects2 = [
         links: ["http://dawei-gemstore.herokuapp.com/index.html", "https://github.com/shachopin/dawei-gemstore"]
       },
       {
-        name: "Home Rental Application Form",
-        "business features": ["Complete Home Renting Business App that includes rental application, photo gallery, google map customization",
-                              "Embedded AI and form interactivity makes the customer feel warm and welcomed"],
+        name: "Home Rental Business",
+        "business features": ["Complete Home Rental Business App that includes application form, photo gallery, google map customization",
+                              "Embedded AI and form interactivity makes the customer feel warm and welcomed",
+                              "Owner can review the applicant info and decide proceeding or not",
+                              "Photo gallery done with masonry"],
         "technical highlights": ["Angular Form Validation",
                                 "Firebase",
                                 "JQuery Masonry",
