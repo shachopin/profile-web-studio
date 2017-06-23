@@ -119,7 +119,7 @@ var projects2 = [
         "technical highlights": ["Angular",                                
                                  "Angular Routes",
                                  "Github API"],
-        links: ["https://github-search.glitch.me"]
+        links: ["https://github-search.glitch.me", "https://github.com/shachopin/github-search-glitch"]
       },
       {
         name: "Angular Gemstore",
