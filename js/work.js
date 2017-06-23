@@ -53,7 +53,7 @@ var projects2 = [
                                  "Nodes.js", 
                                  "Mongodb",
                                  "Restful API"],
-        links: ["https://mongodb-based-notes-node.glitch.me/?client=jquery"]
+        links: ["https://mongodb-based-notes-node.glitch.me/?client=jquery", "https://github.com/shachopin/mongodb-based-notes-node-glitch"]
       },
        {
         name: "Rest API Transmitter",
@@ -79,7 +79,7 @@ var projects2 = [
                                  "Nodes.js", 
                                  "Mongodb",
                                  "Restful API"],
-        links: ["https://mongodb-based-notes-node.glitch.me"]
+        links: ["https://mongodb-based-notes-node.glitch.me", "https://github.com/shachopin/mongodb-based-notes-node-glitch"]
       }
     ]
   },{
