@@ -27,7 +27,7 @@ var projects2 = [
                                  "Nodes.js as backend", 
                                  "Mongodb as db",
                                  "Restful API"],
-        links: ["https://oracle-jet.gomix.me/"]
+        links: ["https://oracle-jet.gomix.me/", "https://github.com/shachopin/glitch-ojet-todo"]
       },
       {
         name: "I love coding! - Coding Exercises Tracking App",
