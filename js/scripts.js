@@ -104,60 +104,83 @@ $(function () { //document ready start
   //for works2 row (square image with hover text descriptpion)
   //javscript string can not have line breaks (or blank lines) in lines, have to use \ to connect multiple lines of strings
   //.apend() can be chained. most jquery methods can be chained, because it returns jquery object 
-  for (var i = 0; i < projects2.length; i++) {  //here we change a href to let it become a modal, initially href='" + projects2[i].link + "'
-    $("#works2").append("\
-      <div class='col-xs-6 col-md-3'>\
-        <a class='work-img' href='#portfolioModal" + i + "' data-toggle='modal'>\
-          <img class='img-responsive' src='" + projects2[i].pic + "'>\
-          <span class='info'>\
-            <p class='proj-title'>Category:</p>" + projects2[i].title + "\
-          </span>\
-        </a>\
-      </div>\
-    ").append("\
-    <div class='portfolio-modal modal fade' id='portfolioModal" + i + "' tabindex='-1' role='dialog' aria-hidden='true'>\
-        <div class='modal-content'>\
-            <div class='close-modal' data-dismiss='modal'>\
-                <div class='lr'>\
-                    <div class='rl'>\
+  var ref = firebase.database().ref('projects');
+  ref.once('value',function(snap) { //this is async call
+    snap.forEach(function(item) //this is sync call
+     {
+        $("#works2").append("\
+          <div class='col-xs-6 col-md-3'>\
+            <a class='work-img' href='#portfolioModal" + item.key + "' data-toggle='modal'>\
+              <img class='img-responsive' src='" + item.val().pic + "'>\
+              <span class='info'>\
+                <p class='proj-title'>Category:</p>" + item.val().title + "\
+              </span>\
+            </a>\
+          </div>\
+        ").append("\
+        <div class='portfolio-modal modal fade' id='portfolioModal" + item.key + "' tabindex='-1' role='dialog' aria-hidden='true'>\
+            <div class='modal-content'>\
+                <div class='close-modal' data-dismiss='modal'>\
+                    <div class='lr'>\
+                        <div class='rl'>\
+                        </div>\
                     </div>\
                 </div>\
-            </div>\
-            <div class='container'>\
-                <div class='row'>\
-                    <div class='col-lg-12'>\
-                        <div class='modal-body'>\
-                            <h2>" + projects2[i].title + "</h2>\
-                            <p class='item-intro text-muted'>" + projects2[i].description + "</p>\
-                            <table class='table table-bordered'>\
-                               <thread>\
-                                  <tr>\
-                                     <th>App Name</th>\
-                                     <th>Business Features</th>\
-                                     <th>Technical Highlights</th>\
-                                     <th>Link</th>\
-                                  </tr>"
-                                + getTableRowsHTML(projects2[i].apps) +
-                               "</thread>\
-                            <table>\
-                            <button type='button' class='btn btn-success' data-dismiss='modal'><i class='fa fa-times'></i> Close Window</button>\
+                <div class='container'>\
+                    <div class='row'>\
+                        <div class='col-lg-12'>\
+                            <div class='modal-body'>\
+                                <h2>" + item.val().title + "</h2>\
+                                <p class='item-intro text-muted'>" + item.val().description + "</p>\
+                                <table class='table table-bordered'>\
+                                   <thread>\
+                                      <tr>\
+                                         <th>App Name</th>\
+                                         <th>Business Features</th>\
+                                         <th>Technical Highlights</th>\
+                                         <th>Link</th>\
+                                      </tr>"
+                                    + getTableRowsHTML(item.val().apps) +
+                                   "</thread>\
+                                <table>\
+                                <button type='button' class='btn btn-success' data-dismiss='modal'><i class='fa fa-times'></i> Close Window</button>\
+                            </div>\
                         </div>\
                     </div>\
                 </div>\
             </div>\
         </div>\
-    </div>\
-  "); 
-    
-    var images = $("#works2 img");
-    if(i % 2 === 0){
-     // $(images[i]).css({"border": "2px solid DodgerBlue","border-radius":"50%"}); //watch this line... you cannot directly say image[i].css, because css is not a method for image[i] in this case, css is a jquery method, also this way you can set 2 css rules
-      $(images[i]).css("border", "5px solid DodgerBlue");  //this is 1 css rule setting, above can set multiple css rules
-    } else {
-      $(images[i]).css("border", "5px solid salmon");  //this is 1 css rule setting, above can set multiple css rules
-    }
-  } //end of for loop
-  
+      "); 
+
+       var images = $("#works2 img");
+
+       if(item.key % 2 === 0){
+         // $(images[i]).css({"border": "2px solid DodgerBlue","border-radius":"50%"}); //watch this line... you cannot directly say image[i].css, because css is not a method for image[i] in this case, css is a jquery method, also this way you can set 2 css rules
+          $(images[item.key]).css("border", "5px solid DodgerBlue");  //this is 1 css rule setting, above can set multiple css rules
+       } else {
+          $(images[item.key]).css("border", "5px solid salmon");  //this is 1 css rule setting, above can set multiple css rules
+       }
+     }        
+    ); 
+
+    //the below portion has to be inside ref.once('value',function(snap) - async call. 
+    //If put outside, the DOM node for .work-img is not mounted when you run $(".work-img").mouseenter, hence no effect 
+    $(".work-img").mouseenter(function() {
+      //console.log(this); //this is the DOM object(for anchor tag) on which that event got trigger, you need to wrap this DOM with $ 
+      //DOM object -> jquery object so you can use jqeury methods
+      //kinda like above image[i].css is not defined issue
+      //$(this).hide(); //works, when mouse hover, item vanishes
+      /*
+      this, in our situation, refers to the anchor tag. What we need is the span tag with the class of "info" inside this anchor tag. this does not work like a regular descendant selector like the ones we have used before. But jQuery still makes it easy for us to select an element inside this. All we need is to write the following code:
+
+      $(".info", this)
+      */   
+      $(".info", this).show();
+    }).mouseleave(function(){
+      $(".info", this).hide();
+    }); //method chaining  //end of snap.forEach(function(item) //this is sync call
+  }); //end of ref.once('value',function(snap) { //this is async call
+                   
   function getTableRowsHTML(apps) {
     var tableRowsHTML = "";
     for (var i = 0; i< apps.length; i++) {
@@ -223,21 +246,21 @@ $(function () { //document ready start
     return linksHTML;    
   }
   
-  $(".work-img").mouseenter( function() {
-    //console.log(this); //this is the DOM object(for anchor tag) on which that event got trigger, you need to wrap this DOM with $ 
-    //DOM object -> jquery object so you can use jqeury methods
-    //kinda like above image[i].css is not defined issue
-    //$(this).hide(); //works, when mouse hover, item vanishes
-    /*
-    this, in our situation, refers to the anchor tag. What we need is the span tag with the class of "info" inside this anchor tag. this does not work like a regular descendant selector like the ones we have used before. But jQuery still makes it easy for us to select an element inside this. All we need is to write the following code:
-
-    $(".info", this)
-    */   
-    $(".info", this).show();
-  }).mouseleave(function(){
-    $(".info", this).hide();
-  }); //method chaining
-     
+  //for Q&A section: using templating tricks
+  var questionTemplate = $('script[data-template="question"]').html();
+  var ref = firebase.database().ref('questions');
+  ref.once('value',function(snap) { //this is async call
+    snap.forEach(function(item) //this is sync call
+     {
+        // Replace template markers with data
+        var thisTemplate = questionTemplate.replace(/{{id}}/g, item.key)
+                                           .replace(/{{title}}/g, item.val().title)
+                                           .replace(/{{body}}/g, item.val().body);
+        $('#accordion').append(thisTemplate);
+    });
+  });
+      
+  
 });  //document ready end
 
 //The last step under "Map Options" is the most interesting step. Because now we are actually going to write the JavaScript that accesses the API library and puts life into your map. Let's take a look at the example at the top of the page again. If you compare your code to the example you should notice that only one part is missing:
