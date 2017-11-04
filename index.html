@@ -329,6 +329,7 @@
                 <ul>
                   <li>Jquery</li>
                   <li>Angular.js</li>
+                  <li>React</li>
                   <li>Knockout.js</li>
                   <li>Oracle JET framework</li>
                 </ul>
@@ -491,49 +492,24 @@
         </div>  
       </div>
       <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
-        <div class="panel panel-default">
-          <div class="panel-heading" role="tab" id="headingOne">
-            <h4 class="panel-title">
-              <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                <span class="glyphicon glyphicon-plus"></span> Where are you based?
-              </a>
-            </h4>
-          </div>
-          <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
-            <div class="panel-body">
-              I live in Bay Area of Californa. At this point, I am not looking for relocation. So I prefer online work or on-site job near SF or Silicon Valley. Thank you!
-            </div>
-          </div>
-        </div>
-        <div class="panel panel-default">
-          <div class="panel-heading" role="tab" id="headingTwo">
-            <h4 class="panel-title">
-              <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                <span class="glyphicon glyphicon-plus"></span> Do you need visa sponsorship?
-              </a>
-            </h4>
-          </div>
-          <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
-            <div class="panel-body">
-              Negative. I have the permanent residence, so I am perfectly ok to work without a sponsorship.
-            </div>
-          </div>
-        </div>
-        <div class="panel panel-default">
-          <div class="panel-heading" role="tab" id="headingThree">
-            <h4 class="panel-title">
-              <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                <span class="glyphicon glyphicon-plus"></span> When can you start?
-              </a>
-            </h4>
-          </div>
-          <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
-            <div class="panel-body">
-              Yesterday!
-            </div>
-          </div>
-        </div>
       </div><!-- /panel-group id accordion -->
+      
+      <script type="text/template" data-template="question">
+        <div class="panel panel-default">
+          <div class="panel-heading" role="tab" id="{{id}}1">
+            <h4 class="panel-title">
+              <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#{{id}}2" aria-expanded="false" aria-controls="{{id}}2">
+                <span class="glyphicon glyphicon-plus"></span> {{title}}
+              </a>
+            </h4>
+          </div>
+          <div id="{{id}}2" class="panel-collapse collapse" role="tabpanel" aria-labelledby="{{id}}1">
+            <div class="panel-body">
+              {{body}}
+            </div>
+          </div>
+        </div>
+      </script>   
     </div><!-- /container -->
     
     
@@ -585,12 +561,26 @@
     var st_hover_widget = new sharethis.widgets.hoverbuttons(options);
     </script>
     
-    <script src="js/work.js"></script>
     <script src="js/scripts.js"></script>
     
     <!--for google javascript api, using a different api key then google embedded map api -->
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCTU05e_lkk19HBUiEs2irx0ZjliQ-3x9w&callback=initMap"
     async defer></script>
-
+    
+    <!--for firebase: project name is my-profile-glitch project-->
+    <script src="https://www.gstatic.com/firebasejs/4.6.1/firebase.js"></script>
+    <script>
+      // Initialize Firebase
+      var config = {
+        apiKey: "AIzaSyD-1xseGukAGvgyOzDbhLlhqpjdJ0sYzb4",
+        authDomain: "my-profile-glitch.firebaseapp.com",
+        databaseURL: "https://my-profile-glitch.firebaseio.com",
+        projectId: "my-profile-glitch",
+        storageBucket: "my-profile-glitch.appspot.com",
+        messagingSenderId: "567604889329"
+      };
+      firebase.initializeApp(config);
+    </script>
+    
   </body>
 </html>
