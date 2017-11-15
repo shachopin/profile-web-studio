@@ -259,6 +259,12 @@ $(function () { //document ready start
         $('#accordion').append(thisTemplate);
     });
   });
+  
+  var ref = firebase.database().ref('resume');
+  ref.once("value", function(snapshot) {
+    var linkValue = snapshot.val();  // it's only one entry resume: 'http:///asdasdasda'
+    $('#modalembed').attr('src', linkValue);
+  });
       
   
 });  //document ready end
